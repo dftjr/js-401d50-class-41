@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Pressable, Alert, Modal } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import Stack from './Stack';
 
 const App = () => {
   const [modalVisible, setOpen] = useState(false);
   return (
+    <NavigationContainer>
+      <Stack/>
     <View style={styles.centeredView}>
       <Text style={styles.textStyle}>HELLO WORLD!</Text>
       <Text style={styles.textStyle}>MY FIRST PHONE APP</Text>
@@ -35,6 +39,7 @@ const App = () => {
         <Text style={styles.textStyle}>PRESS ME</Text>
       </Pressable>
     </View>
+    </NavigationContainer>
   );
 };
 
